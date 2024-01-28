@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Làm người yêu</title>
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .heart-container {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ANIMATION */
+        @keyframes color-change {
+            0% {
+                background: #DC143C;
+            }
+
+            25% {
+                background: purple;
+            }
+
+            50% {
+                background: white;
+            }
+
+            75% {
+                background: #E0115F;
+            }
+
+            100% {
+                background: #DC143C;
+            }
+        }
+
+        /* HEART */
+
+        .heart {
+            background-color: #DC143C;
+            position: relative;
+            transform: rotate(-45deg);
+            width: 50px;
+            height: 50px;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            background-color: #DC143C;
+            border-radius: 50%;
+            height: 50px;
+            position: absolute;
+            width: 50px;
+        }
+
+        .heart:before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 25px;
+            top: 0;
+        }
+
+        .heart,
+        .heart:before,
+        .heart:after {
+            animation-name: color-change;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        /* HEART 2 */
+        .heart-2,
+        .heart-2:before,
+        .heart-2:after {
+            animation-delay: 1s;
+        }
+
+        /* HEART 3 */
+        .heart-3,
+        .heart-3:before,
+        .heart-3:after {
+            animation-delay: 2s;
+        }
+
+        /* Back ground*/
+        body {
+            background-image: url("img/background1.jpg");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .text-container {
+            text-align: center;
+            color: red;
+            font-size: 18px;
+            margin-top: 20px;
+            /* Adjust as needed */
+            font-family: 'Pacifico', cursive;
+        }
+
+        /* Container for the hearts and text */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Hearts in a horizontal line */
+        .hearts-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Adjust the margin for individual heart containers if necessary */
+        .heart-container {
+            margin-top: 10px;
+            /* Adjust as needed */
+        }
+
+        .center {
+            text-align: center;
+            font-family: 'Calibri';
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Button styles */
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .heart-button {
+            background-color: #DC143C;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .heart-button:hover {
+            background-color: #E0115F;
+        }
+    </style>
+    <div class="container">
+        <div class="text-container">
+            <p>Xin chào bạn Oanh!!!</p>
+        </div>
+        <div class="heart-container">
+            <div class="heart heart-1"></div>
+        </div>
+        <div class="heart-container">
+            <div class="heart heart-2"></div>
+        </div>
+        <div class="heart-container">
+            <div class="heart heart-3"></div>
+        </div>
+        <div class="button-container">
+            <a href="index2.html" class="heart-button">Ấn vào đây nè!!!</a>
+        </div>
+    </div>
+</body>
+
+</html>
