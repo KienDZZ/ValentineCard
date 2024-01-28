@@ -210,7 +210,7 @@
             text-align: center;
         }
 
-        .text:hover span {
+        /* .text:hover span {
             display: none;
         }
 
@@ -218,10 +218,9 @@
             content: "Tết năm nay anh ăn kẹo ít hơn mọi năm vì có Oanh đã đủ ngọt ngào rùi. Valentine vui vẻ <3";
             font-size: 25px;
 
-        }
+        } */
 
-        /* Hiệu ứng cho di động */
-        @media only screen and (max-width: 767px) {
+        /* @media only screen and (max-width: 767px) {
 
             .text:active span,
             .text:focus span {
@@ -233,7 +232,7 @@
                 content: "Tết năm nay anh ăn kẹo ít hơn mọi năm vì có Oanh đã đủ ngọt ngào rùi. Valentine vui vẻ <3";
                 font-size: 25px;
             }
-        }
+        } */
 
         footer {
             position: fixed;
@@ -249,8 +248,21 @@
             padding-top: 15px;
         }
     </style>
+       <script>
+        function changeText() {
+            // Lấy phần tử chứa dòng chữ cần thay đổi
+            var textElement = document.querySelector('.text span');
+
+            // Thay đổi nội dung của dòng chữ
+            textElement.innerHTML = "Tết năm nay anh ăn ít kẹo vì có Oanh đã đủ ngọt ngào rùi. Valentine vui vẻ <3";
+
+            var hoverElement = document.querySelector('.hover');
+            hoverElement.innerHTML = "Hết rùi đó hehe <3"
+
+        }
+    </script>
     <div class="happy-valentines">
-        <div class="valentines-day-card">
+        <div class="valentines-day-card" onclick="changeText()">
             <div class="clouds"></div>
             <div class="hearts">
                 <div class="heartOne">
